@@ -1,0 +1,44 @@
+
+    <html lang="en">
+      <head>
+        <title>BOOKnow</title>
+        <link rel="stylesheet" href="signup.css" />
+      
+      </head>
+      <body>
+        <div class="signup-box">
+          <h1>Sign Up</h1>
+          <br><br>
+          <div id="div2">
+          <form action="index.html" onsubmit="return add();">
+            <label>Full Name</label>
+            <input type="text" id="in1"/>
+            <label>Email</label>
+            <input type="email"  />
+            <label>Password</label>
+            <input type="password"  id="in2"/>
+            <label>Confirm Password</label>
+            <input type="password" id="in2" />
+            <span id="s1" style="color: red;"></span>
+            <button type="submit">Sign up </button>
+          </form>
+ </div>
+        </div>
+        <p class="para-2">
+          Already have an account? <a href="sign in.html">Login here</a>
+        </p>
+        <script>
+          function add() {
+              var passValue = document.getElementById('in2').value;
+              var userNameValue = document.getElementById('in1').value;
+  
+              if(passValue.length < 8){
+                  document.getElementById('s1').innerHTML = 'Password must contain 8 characters';
+                  return false;
+              }
+  
+              return true; 
+          }
+      </script>
+      </body>
+    </html>

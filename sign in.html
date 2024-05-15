@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login | By Code Info</title>
+    <link rel="stylesheet" href="signup.css" />
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <div class="login-box">
+        <h1>Login</h1>
+        <div id="div2">
+          <form action="index.html" onsubmit="return add();">
+                <label >Username:</label>
+                <input type="text" id="in1"><br>
+                <label >Password:</label>
+                <input type="password" id="in2"><br>
+                <span id="s1" style="color: red;"></span>
+                <button type="submit">login</button>
+            </form>
+            <br>
+        </div>
+        <p class="para-2">
+          Not have an account? <a href="singup.html">Sign Up Here</a>
+      </p>
+    </div>
+
+    <script>
+     
+
+        function add() {
+            var passValue = document.getElementById('in2').value;
+            var userNameValue = document.getElementById('in1').value;
+
+            if(passValue.length < 8){
+                document.getElementById('s1').innerHTML = 'Password must contain 8 characters';
+                return false;
+            }
+
+            return true; 
+        }
+    </script>
+</body>
+</html>
